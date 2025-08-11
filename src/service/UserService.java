@@ -9,20 +9,20 @@ public class UserService {
 
     public void createUser(int id, String name, int age){
         if( id<0){
-            System.out.println("ID sıfır və ya mənfi ola bilməz!");
+            System.out.println("ID cannot be zero or negative!");
             return;
         }
         if(userDao.existsById(id)){
-            System.out.println("Bu ID artıq mövcuddur!");
+            System.out.println("This ID already exists!");
             return;
         }
 
         if(name == null || name.isEmpty()){
-            System.out.println("Ad boş ola bilməz!");
+            System.out.println("Name cannot be empty!");
             return;
         }
-        if(age <0){
-            System.out.println("Yaş sıfır və ya mənfi ola bilməz!");
+        if(age<=0){
+            System.out.println("Age cannot be zero or negative!");
             return;
         }
         userDao.addUser(new User( id, name,age));

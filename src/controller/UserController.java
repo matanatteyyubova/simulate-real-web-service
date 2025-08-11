@@ -24,12 +24,12 @@ public class UserController {
 
              switch (choice){
                  case 1:
-                     System.out.println("ID: ");
+                     System.out.println("Enter ID: ");
                      int id = scanner.nextInt();
                      scanner.nextLine();
-                     System.out.println("Name: ");
+                     System.out.println("Enter Name: ");
                      String  name = scanner.nextLine();
-                     System.out.println("Age: ");
+                     System.out.println("Enter Age: ");
                      int age = scanner.nextInt();
                      userService.createUser(id,name,age);
                      break;
@@ -41,7 +41,7 @@ public class UserController {
                      break;
 
                  case 3 :
-                     System.out.println("ID daxil edin:");
+                     System.out.println("Enter ID:");
                      int searchId = scanner.nextInt();
 
                      User user = userService.findUser(searchId);
